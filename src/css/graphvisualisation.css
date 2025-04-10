@@ -1,0 +1,54 @@
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  .node {
+    width: 60px;
+    height: 60px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .edge {
+    position: absolute;
+    background: transparent;
+    color: black;
+    font-size: 14px;
+    z-index: 0;
+  }
+  
+  .arrow {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+  }
+  
+  .line {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    transform-origin: left;
+  }
+  
+  .weight-label {
+    position: absolute;
+    background: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+  }
+  
