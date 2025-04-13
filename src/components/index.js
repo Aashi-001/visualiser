@@ -20,6 +20,7 @@ function Index() {
           x: centerX + radius * Math.cos(angle),
           y: centerY + radius * Math.sin(angle),
       };
+
   });
     return (
       <>
@@ -50,12 +51,13 @@ function Index() {
                     const length = Math.sqrt(dx * dx + dy * dy);
                     const angle = Math.atan2(dy, dx) * (180 / Math.PI);
 
+                    const shortenedLength = length - 30;
                     return (
                         <div
                             key={`${from}-${to}-${idx}`}
-                            className="line"
+                            className="line arrow-right"
                             style={{
-                                width: length,
+                                width: shortenedLength,
                                 left: x1,
                                 top: y1,
                                 transform: `rotate(${angle}deg)`,
@@ -65,7 +67,7 @@ function Index() {
                                 className="weight-label"
                                 style={{
                                     position: 'absolute',
-                                    left: length / 2 - 10,
+                                    left: shortenedLength / 2 - 10,
                                     top: -20,
                                 }}
                             >
@@ -76,7 +78,7 @@ function Index() {
                 })
             )}
         </div>
-        {/* {graph.map((edges, node) => (
+        {graph.map((edges, node) => (
                 <div key={node}>
                     <strong>Node {node}:</strong>
                     <ul>
@@ -92,8 +94,8 @@ function Index() {
                             </>
                         ))}
                     </ul>
-                </div> */}
-            {/* ))} */}
+                </div> ))
+            }
       </>
     )
 }
